@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتایج جستجو | Flormod</title>
+    
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search-results.css">
+    
+    <!-- فونت فارسی زیبا -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    
+    <!-- فونت خاص برای لوگو -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    
+    <a href="index.html" class="logo">
+        <span class="logo-m">M</span>
+        <span class="logo-text">Flormod</span>
+    </a>
+    
+    <nav class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> خانه</a>
+        <a href="index.html#mods"><i class="fas fa-gamepad"></i> مادها</a>
+        <a href="popular-mods.html"><i class="fas fa-fire"></i> پرطرفدارها</a>
+        <a href="index.html#games"><i class="fas fa-dice"></i> بازی‌ها</a>
+        <a href="faq.html"><i class="fas fa-question-circle"></i> سوالات متداول</a>
+    </nav>
+    
+    <div class="icons">
+        <a href="#" class="fas fa-search" id="search-btn"></a>
+    </div>
+    
+    <!-- search form -->
+    <form action="search-results.html" class="search-form" method="GET">
+        <input type="search" id="search-box" name="q" placeholder="جستجوی ماد..." value="">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+</header>
+<!-- header section ends -->
+
+<!-- breadcrumb -->
+<div class="breadcrumb">
+    <div class="container">
+        <a href="index.html"><i class="fas fa-home"></i> خانه</a>
+        <i class="fas fa-chevron-left"></i>
+        <span>نتایج جستجو</span>
+    </div>
+</div>
+
+<!-- search results section -->
+<section class="search-results">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">نتایج <span>جستجو</span></h2>
+            <div class="search-info">
+                <div id="searchTermDisplay" class="search-term">
+                    در حال جستجو...
+                </div>
+                <div id="resultCount" class="result-count">
+                    <span id="countNumber">0</span> نتیجه یافت شد
+                </div>
+            </div>
+        </div>
+        
+        <!-- فیلترها -->
+        <div class="search-filters">
+            <div class="filter-group">
+                <h4><i class="fas fa-filter"></i> فیلتر بر اساس:</h4>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">همه</button>
+                    <button class="filter-btn" data-filter="vehicle">وسایل نقلیه</button>
+                    <button class="filter-btn" data-filter="weapon">سلاح‌ها</button>
+                    <button class="filter-btn" data-filter="character">شخصیت‌ها</button>
+                    <button class="filter-btn" data-filter="map">نقشه‌ها</button>
+                    <button class="filter-btn" data-filter="graphics">گرافیک</button>
+                </div>
+            </div>
+            
+            <div class="sort-group">
+                <label for="sortResults"><i class="fas fa-sort-amount-down"></i> مرتب سازی:</label>
+                <select id="sortResults">
+                    <option value="relevant">مرتبط‌ترین</option>
+                    <option value="popular">محبوب‌ترین</option>
+                    <option value="newest">جدیدترین</option>
+                    <option value="downloads">بیشترین دانلود</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- نتایج جستجو -->
+        <div class="results-container">
+            <div id="searchResults" class="results-grid">
+                <!-- نتایج به صورت داینامیک توسط جاوااسکریپت پر می‌شوند -->
+            </div>
+            
+            <!-- حالت خالی -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <div class="empty-state">
+                    <i class="fas fa-search"></i>
+                    <h3>نتیجه‌ای یافت نشد</h3>
+                    <p>متأسفانه هیچ مادی مطابق با جستجوی شما یافت نشد.</p>
+                    <div class="suggestions">
+                        <h4>پیشنهادات:</h4>
+                        <ul>
+                            <li>از کلمات کلیدی دیگر استفاده کنید</li>
+                            <li>املا کلمات را بررسی کنید</li>
+                            <li>از کلمات کلی‌تر استفاده کنید</li>
+                            <li>در <a href="popular-mods.html">مادهای پرطرفدار</a> جستجو کنید</li>
+                        </ul>
+                    </div>
+                    <a href="index.html#mods" class="btn back-to-mods">
+                        <i class="fas fa-arrow-right"></i> مشاهده همه مادها
+                    </a>
+                </div>
+            </div>
+            
+            <!-- حالت جستجوی خاص -->
+            <div id="specialResults" class="special-results" style="display: none;">
+                <!-- برای جستجوهای خاص مانند "هلیکوپتر" -->
+            </div>
+        </div>
+        
+        <!-- جستجوهای پیشنهادی -->
+        <div class="search-suggestions">
+            <h3><i class="fas fa-lightbulb"></i> جستجوهای پیشنهادی:</h3>
+            <div class="suggestion-tags">
+                <a href="search-results.html?q=هلیکوپتر" class="suggestion-tag">هلیکوپتر</a>
+                <a href="search-results.html?q=ماشین" class="suggestion-tag">ماشین</a>
+                <a href="search-results.html?q=سلاح" class="suggestion-tag">سلاح</a>
+                <a href="search-results.html?q=گرافیک" class="suggestion-tag">گرافیک</a>
+                <a href="search-results.html?q=gta+v" class="suggestion-tag">GTA V</a>
+                <a href="search-results.html?q=نقشه" class="suggestion-tag">نقشه</a>
+                <a href="search-results.html?q=شخصیت" class="suggestion-tag">شخصیت</a>
+                <a href="popular-mods.html" class="suggestion-tag highlight">پرطرفدارها</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <span class="logo-m">M</span>
+                <span class="logo-text">Flormod</span>
+            </div>
+            <p class="footer-description">
+                ارائه بهترین مادهای حرفه‌ای برای GTA V با کیفیت عالی و پشتیبانی کامل.
+            </p>
+            <div class="footer-social">
+                <a href="https://t.me/flormod_channel" target="_blank" class="social-link telegram">
+                    <i class="fab fa-telegram"></i> کانال تلگرام
+                </a>
+                <a href="https://t.me/flormod" target="_blank" class="social-link support">
+                    <i class="fas fa-headset"></i> پشتیبانی تلگرام
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>لینک‌های سریع</h3>
+            <ul>
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="index.html#mods">مادها</a></li>
+                <li><a href="popular-mods.html">پرطرفدارها</a></li>
+                <li><a href="faq.html">سوالات متداول</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>توسعه‌دهنده</h3>
+            <ul>
+                <li><i class="fas fa-code"></i> تیم Lirex</li>
+                <li><i class="fas fa-calendar"></i> تاسیس: ۱۴۰۲</li>
+                <li><i class="fas fa-download"></i> ۵۴,۲۱۰+ دانلود</li>
+                <li><i class="fas fa-users"></i> ۸,۹۴۵+ کاربر</li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>ارتباط با ما</h3>
+            <ul>
+                <li><i class="fas fa-envelope"></i> support@flormod.com</li>
+                <li><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                <li><i class="fab fa-telegram"></i> @flormod_channel</li>
+                <li><i class="fas fa-map-marker-alt"></i> تهران، ولیعصر</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="copyright">
+            © ۱۴۰۴ - ۱۴۰۲ Flormod. تمامی حقوق محفوظ است.
+        </div>
+        <div class="footer-credits">
+            <span><i class="fas fa-calendar"></i> آخرین بروزرسانی: ۲۸/۹/۱۴۰۴</span>
+        </div>
+    </div>
+</footer>
+
+<!-- back to top -->
+<div class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+</div>
+
+<script src="js/search-results.js"></script>
+<script>
+    // دریافت پارامتر جستجو از URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('q') || '';
+    
+    // نمایش عبارت جستجو شده
+    const searchTermDisplay = document.getElementById('searchTermDisplay');
+    const searchBox = document.getElementById('search-box');
+    
+    if (searchQuery) {
+        searchTermDisplay.textContent = `"${searchQuery}"`;
+        if (searchBox) {
+            searchBox.value = searchQuery;
+        }
+    }
+    
+    // داده‌های مادها
+    const allMods = [
+        {
+            id: 1,
+            title: "ماد هلیکوپتر AH-64D Apache",
+            description: "هلیکوپتر نظامی پیشرفته با سیستم تسلیحات کامل و گرافیک 4K",
+            category: "vehicle",
+            image: "images/apache.jpg",
+            downloads: 157,
+            rating: 3.6,
+            date: "1404/09/28",
+            tags: ["هلیکوپتر", "helicopter", "apache", "نظامی", "وسایل نقلیه"],
+            link: "mod-details.html"
+        },
+        {
+            id: 2,
+            title: "ماد ماشین Lamborghini Aventador",
+            description: "ماشین سوپر اسپرت با گرافیک فوق‌العاده و عملکرد واقعی",
+            category: "vehicle",
+            image: "images/car1.jpg",
+            downloads: 124,
+            rating: 4.2,
+            date: "1404/09/27",
+            tags: ["ماشین", "lamborghini", "aventador", "اسپرت", "وسایل نقلیه"],
+            link: "mod-car.html"
+        },
+        {
+            id: 3,
+            title: "ماد سلاح M4A1 پیشرفته",
+            description: "سلاح نظامی با قابلیت شخصی‌سازی کامل و انیمیشن‌های واقعی",
+            category: "weapon",
+            image: "images/weapon1.jpg",
+            downloads: 98,
+            rating: 4.5,
+            date: "1404/09/26",
+            tags: ["سلاح", "m4a1", "تفنگ", "نظامی", "اسلحه"],
+            link: "mod-weapon.html"
+        },
+        {
+            id: 4,
+            title: "ماد نقشه جدید لس سانتوس",
+            description: "اضافه کردن مناطق جدید با جزئیات بالا به نقشه بازی",
+            category: "map",
+            image: "images/map1.jpg",
+            downloads: 78,
+            rating: 4.3,
+            date: "1404/09/25",
+            tags: ["نقشه", "لس سانتوس", "map", "محیط", "منطقه"],
+            link: "mod-map.html"
+        },
+        {
+            id: 5,
+            title: "ماد گرافیک واقعی GTA V",
+            description: "بهبود گرافیک بازی با شیدرهای پیشرفته و نورپردازی واقعی",
+            category: "graphics",
+            image: "images/graphics1.jpg",
+            downloads: 86,
+            rating: 4.8,
+            date: "1404/09/24",
+            tags: ["گرافیک", "graphics", "شیدر", "نورپردازی", "واقعی"],
+            link: "mod-graphics.html"
+        },
+        {
+            id: 6,
+            title: "ماد شخصیت Special Agent",
+            description: "شخصیت جدید با لباس‌ها و توانایی‌های ویژه",
+            category: "character",
+            image: "images/character1.jpg",
+            downloads: 65,
+            rating: 4.1,
+            date: "1404/09/23",
+            tags: ["شخصیت", "character", "کاراکتر", "لباس", "ویژه"],
+            link: "mod-character.html"
+        },
+        {
+            id: 7,
+            title: "ماد ماشین Ferrari F8 Tributo",
+            description: "ماشین اسپرت ایتالیایی با عملکرد عالی",
+            category: "vehicle",
+            image: "images/car2.jpg",
+            downloads: 59,
+            rating: 4.6,
+            date: "1404/09/22",
+            tags: ["ماشین", "ferrari", "فریاری", "اسپرت", "وسایل نقلیه"],
+            link: "#"
+        },
+        {
+            id: 8,
+            title: "ماد سلاح AK-47 طلایی",
+            description: "سلاح معروف با بافت طلایی و انیمیشن واقعی",
+            category: "weapon",
+            image: "images/weapon2.jpg",
+            downloads: 54,
+            rating: 4.4,
+            date: "1404/09/21",
+            tags: ["سلاح", "ak47", "طلایی", "اسلحه", "نظامی"],
+            link: "#"
+        }
+    ];
+    
+    // جستجوهای خاص
+    const specialSearches = {
+        "هلیکوپتر": [allMods[0]],
+        "helicopter": [allMods[0]],
+        "chapter": [allMods[0]],
+        "gta v": allMods,
+        "جی تی ای": allMods,
+        "grand theft auto": allMods,
+        "ماشین": [allMods[1], allMods[6]],
+        "سلاح": [allMods[2], allMods[7]],
+        "نقشه": [allMods[3]],
+        "گرافیک": [allMods[4]],
+        "شخصیت": [allMods[5]]
+    };
+    
+    // نمایش نتایج
+    const resultsContainer = document.getElementById('searchResults');
+    const noResults = document.getElementById('noResults');
+    const specialResults = document.getElementById('specialResults');
+    const resultCount = document.getElementById('countNumber');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    
+    function displayResults(results) {
+        resultsContainer.innerHTML = '';
+        
+        if (results.length === 0) {
+            noResults.style.display = 'block';
+            specialResults.style.display = 'none';
+            resultCount.textContent = '۰';
+        } else {
+            noResults.style.display = 'none';
+            specialResults.style.display = 'none';
+            resultCount.textContent = results.length.toLocaleString('fa-IR');
+            
+            results.forEach(mod => {
+                const modCard = createModCard(mod);
+                resultsContainer.appendChild(modCard);
+            });
+        }
+    }
+    
+    function createModCard(mod) {
+        const div = document.createElement('div');
+        div.className = `mod-card ${mod.category}`;
+        div.setAttribute('data-downloads', mod.downloads);
+        div.setAttribute('data-rating', mod.rating);
+        div.setAttribute('data-date', mod.date);
+        
+        div.innerHTML = `
+            <div class="mod-image">
+                <img src="${mod.image}" alt="${mod.title}">
+            </div>
+            <div class="mod-content">
+                <h3 class="mod-title">${mod.title}</h3>
+                <p class="mod-desc">${mod.description}</p>
+                <div class="mod-info">
+                    <span class="mod-category">
+                        <i class="fas fa-tag"></i> 
+                        ${getCategoryName(mod.category)}
+                    </span>
+                    <span class="mod-stats">
+                        <i class="fas fa-download"></i> ${mod.downloads} دانلود
+                    </span>
+                </div>
+                <div class="mod-tags">
+                    ${mod.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+                <div class="mod-actions">
+                    <a href="${mod.link}" class="btn read-more-btn">
+                        <i class="fas fa-external-link-alt"></i> مشاهده ماد
+                    </a>
+                </div>
+            </div>
+        `;
+        
+        return div;
+    }
+    
+    function getCategoryName(category) {
+        const categories = {
+            'vehicle': 'وسایل نقلیه',
+            'weapon': 'سلاح‌ها',
+            'character': 'شخصیت‌ها',
+            'map': 'نقشه‌ها',
+            'graphics': 'گرافیک'
+        };
+        return categories[category] || 'متفرقه';
+    }
+    
+    function searchMods(query) {
+        if (!query.trim()) {
+            return allMods;
+        }
+        
+        const lowerQuery = query.toLowerCase();
+        
+        // بررسی جستجوهای خاص
+        if (specialSearches[lowerQuery]) {
+            return specialSearches[lowerQuery];
+        }
+        
+        // جستجوی عادی
+        return allMods.filter(mod => {
+            return (
+                mod.title.toLowerCase().includes(lowerQuery) ||
+                mod.description.toLowerCase().includes(lowerQuery) ||
+                mod.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
+            );
+        });
+    }
+    
+    // اجرای جستجو
+    let currentResults = searchMods(searchQuery);
+    displayResults(currentResults);
+    
+    // فیلترها
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            let filteredResults;
+            if (filter === 'all') {
+                filteredResults = currentResults;
+            } else {
+                filteredResults = currentResults.filter(mod => mod.category === filter);
+            }
+            
+            displayResults(filteredResults);
+        });
+    });
+    
+    // مرتب‌سازی
+    const sortSelect = document.getElementById('sortResults');
+    
+    sortSelect.addEventListener('change', function() {
+        const sortBy = this.value;
+        
+        const sortedResults = [...currentResults].sort((a, b) => {
+            switch(sortBy) {
+                case 'downloads':
+                    return b.downloads - a.downloads;
+                case 'popular':
+                    return (b.downloads + b.rating * 100) - (a.downloads + a.rating * 100);
+                case 'newest':
+                    return new Date(b.date) - new Date(a.date);
+                case 'relevant':
+                default:
+                    return 0;
+            }
+        });
+        
+        displayResults(sortedResults);
+    });
+    
+    // Back to top
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.opacity = '1';
+            backToTopBtn.style.visibility = 'visible';
+        } else {
+            backToTopBtn.style.opacity = '0';
+            backToTopBtn.style.visibility = 'hidden';
+        }
+    });
+    
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+</script>
+
+</body>
+</html>

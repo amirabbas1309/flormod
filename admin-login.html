@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود ادمین | Flormod</title>
+    
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style-admin.css">
+    
+    <!-- فونت فارسی -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<!-- Admin Login Section -->
+<section class="admin-login-section">
+    <div class="login-container">
+        <div class="login-header">
+            <div class="admin-logo">
+                <i class="fas fa-user-shield"></i>
+                <h1>Flormod <span>Admin</span></h1>
+            </div>
+            <p class="login-subtitle">پنل مدیریت محتوای سایت</p>
+        </div>
+        
+        <div class="login-form-container">
+            <form id="adminLoginForm" class="login-form">
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        رمز ورود ادمین
+                    </label>
+                    <div class="password-input">
+                        <input type="password" id="password" placeholder="رمز عبور را وارد کنید" required>
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-hint">
+                        <i class="fas fa-info-circle"></i>
+                        پنل مدیران
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn login-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        ورود به پنل
+                    </button>
+                    <a href="index.html" class="btn back-btn">
+                        <i class="fas fa-home"></i>
+                        بازگشت به سایت
+                    </a>
+                </div>
+                
+                <div class="login-note">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>این پنل فقط برای دسترسی مدیران سایت است. هرگونه استفاده غیرمجاز پیگرد قانونی دارد.</p>
+                </div>
+            </form>
+            
+            <div class="login-info">
+                <div class="info-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>امکانات پنل</h3>
+                    <ul>
+                        <li>مدیریت و حذف مادها</li>
+                        <li>اضافه کردن ماد جدید</li>
+                        <li>ویرایش اطلاعات مادها</li>
+                        <li>مشاهده آمار سایت</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>امنیت</h3>
+                    <ul>
+                        <li>ورود با رمز یکبار مصرف</li>
+                        <li>ذخیره‌سازی ایمن اطلاعات</li>
+                        <li>لاگ فعالیت‌ها</li>
+                        <li>خروج خودکار پس از 30 دقیقه</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="login-footer">
+            <p><i class="fas fa-calendar"></i> آخرین ورود: <span id="lastLogin">--/--/---- --:--</span></p>
+            <p><i class="fas fa-code"></i> نسخه پنل: ۱.۰.۰</p>
+        </div>
+    </div>
+    
+    <!-- Access Status -->
+    <div id="accessStatus" class="access-status">
+        <div class="status-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>دسترسی تایید شد</h3>
+            <p>در حال انتقال به پنل مدیریت...</p>
+        </div>
+    </div>
+</section>
+
+<script src="js/admin-login.js"></script>
+<script>
+    // نمایش آخرین ورود
+    const lastLogin = localStorage.getItem('lastAdminLogin');
+    if (lastLogin) {
+        document.getElementById('lastLogin').textContent = lastLogin;
+    }
+</script>
+
+</body>
+</html>

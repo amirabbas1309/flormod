@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>همه مادها | Flormod</title>
+    
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all-mods.css">
+    
+    <!-- فونت فارسی -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    
+    <a href="index.html" class="logo">
+        <img src="images/fit-logo.png" alt="Flormod Logo" class="logo-img">
+        <span class="logo-text">Flormod</span>
+    </a>
+    
+    <nav class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> خانه</a>
+        <a href="all-mods.html" class="active"><i class="fas fa-th-list"></i> همه مادها</a>
+        <a href="popular-mods.html"><i class="fas fa-fire"></i> پرطرفدارها</a>
+        <a href="faq.html"><i class="fas fa-question-circle"></i> سوالات متداول</a>
+        <a href="rules.html"><i class="fas fa-gavel"></i> قوانین</a>
+    </nav>
+    
+    <div class="icons">
+        <a href="#" class="fas fa-search" id="search-btn"></a>
+    </div>
+    
+    <!-- search form -->
+    <form action="search-results.html" class="search-form" method="GET">
+        <input type="search" id="search-box" name="q" placeholder="جستجوی ماد...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+</header>
+<!-- header section ends -->
+
+<!-- breadcrumb -->
+<div class="breadcrumb">
+    <div class="container">
+        <a href="index.html"><i class="fas fa-home"></i> خانه</a>
+        <i class="fas fa-chevron-left"></i>
+        <span>همه مادها</span>
+    </div>
+</div>
+
+<!-- all mods section -->
+<section class="all-mods">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">همه <span>مادها</span></h2>
+            <p class="section-subtitle">تمامی مادهای موجود در Flormod برای بازی GTA V</p>
+            <div class="total-mods">
+                <i class="fas fa-cube"></i>
+                <span>۸ ماد موجود</span>
+            </div>
+        </div>
+        
+        <!-- فیلترها -->
+        <div class="all-mods-filters">
+            <div class="filter-group">
+                <h4><i class="fas fa-filter"></i> مرتب‌سازی بر اساس:</h4>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-sort="newest">جدیدترین</button>
+                    <button class="filter-btn" data-sort="oldest">قدیمی‌ترین</button>
+                    <button class="filter-btn" data-sort="size">حجم فایل</button>
+                    <button class="filter-btn" data-sort="name">نام الفبایی</button>
+                </div>
+            </div>
+            
+            <div class="view-options">
+                <button class="view-btn active" data-view="grid">
+                    <i class="fas fa-th-large"></i>
+                </button>
+                <button class="view-btn" data-view="list">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- لیست همه مادها -->
+        <div class="all-mods-container grid-view">
+            <!-- ماد Apache -->
+            <div class="all-mod-card" data-date="1404/09/28" data-size="20" data-name="Apache">
+                <div class="all-mod-image">
+                    <img src="images/apache.jpg" alt="AH-64D Apache">
+                    <div class="all-mod-badge">پرطرفدار</div>
+                </div>
+                <div class="all-mod-content">
+                    <h3 class="all-mod-title">ماد هلیکوپتر AH-64D Apache</h3>
+                    <p class="all-mod-desc">هلیکوپتر نظامی پیشرفته با سیستم تسلیحات کامل و گرافیک 4K</p>
+                    <div class="all-mod-info">
+                        <div class="info-item">
+                            <i class="fas fa-hdd"></i>
+                            <span>۲۰ مگابایت</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>۲۸/۹/۱۴۰۴</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-download"></i>
+                            <span>۱۵۷ دانلود</span>
+                        </div>
+                    </div>
+                    <div class="all-mod-category">
+                        <i class="fas fa-helicopter"></i>
+                        <span>وسایل نقلیه نظامی</span>
+                    </div>
+                    <div class="all-mod-actions">
+                        <a href="mod-details.html" class="btn view-btn">
+                            <i class="fas fa-external-link-alt"></i> مشاهده
+                        </a>
+                        <a href="files/AH-64D Longbow Apache.rar" class="btn download-btn-small" download>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ماد B2 -->
+            <div class="all-mod-card" data-date="1404/09/30" data-size="12" data-name="B2">
+                <div class="all-mod-image">
+                    <img src="images/B2-post.jpg" alt="B2">
+                    <div class="all-mod-badge">جدید</div>
+                </div>
+                <div class="all-mod-content">
+                    <h3 class="all-mod-title">ماد وسیله نقلیه B2</h3>
+                    <p class="all-mod-desc">وسیله نقلیه نظامی سنگین و پیشرفته برای مأموریت‌های حساس</p>
+                    <div class="all-mod-info">
+                        <div class="info-item">
+                            <i class="fas fa-hdd"></i>
+                            <span>۱۲ مگابایت</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>۳۰/۹/۱۴۰۴</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-download"></i>
+                            <span>۸۵ دانلود</span>
+                        </div>
+                    </div>
+                    <div class="all-mod-category">
+                        <i class="fas fa-truck"></i>
+                        <span>وسایل نقلیه نظامی</span>
+                    </div>
+                    <div class="all-mod-actions">
+                        <a href="B2.html" class="btn view-btn">
+                            <i class="fas fa-external-link-alt"></i> مشاهده
+                        </a>
+                        <a href="files/B2.rar" class="btn download-btn-small" download>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ماد M1114 -->
+            <div class="all-mod-card" data-date="1404/09/30" data-size="24" data-name="M1114">
+                <div class="all-mod-image">
+                    <img src="images/M1114-set.jpg" alt="M1114 Up Armored">
+                    <div class="all-mod-badge">جدید</div>
+                </div>
+                <div class="all-mod-content">
+                    <h3 class="all-mod-title">ماد M1114 Up Armored</h3>
+                    <p class="all-mod-desc">وسیله نقلیه زره‌پوش برای عملیات‌های نظامی و امنیتی</p>
+                    <div class="all-mod-info">
+                        <div class="info-item">
+                            <i class="fas fa-hdd"></i>
+                            <span>۲۴ مگابایت</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>۳۰/۹/۱۴۰۴</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-download"></i>
+                            <span>۷۲ دانلود</span>
+                        </div>
+                    </div>
+                    <div class="all-mod-category">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>وسایل نقلیه زره‌پوش</span>
+                    </div>
+                    <div class="all-mod-actions">
+                        <a href="M1114.html" class="btn view-btn">
+                            <i class="fas fa-external-link-alt"></i> مشاهده
+                        </a>
+                        <a href="files/M1114.rar" class="btn download-btn-small" download>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ماد M142 -->
+            <div class="all-mod-card" data-date="1404/09/30" data-size="9" data-name="M142">
+                <div class="all-mod-image">
+                    <img src="images/M142-set.jpg" alt="M142 HIMARS">
+                    <div class="all-mod-badge">جدید</div>
+                </div>
+                <div class="all-mod-content">
+                    <h3 class="all-mod-title">ماد M142 HIMARS</h3>
+                    <p class="all-mod-desc">سیستم پرتاب موشک سریع و قابل حمل برای حمله از راه دور</p>
+                    <div class="all-mod-info">
+                        <div class="info-item">
+                            <i class="fas fa-hdd"></i>
+                            <span>۹ مگابایت</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>۳۰/۹/۱۴۰۴</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-download"></i>
+                            <span>۶۸ دانلود</span>
+                        </div>
+                    </div>
+                    <div class="all-mod-category">
+                        <i class="fas fa-rocket"></i>
+                        <span>سیستم‌های موشکی</span>
+                    </div>
+                    <div class="all-mod-actions">
+                        <a href="M142.html" class="btn view-btn">
+                            <i class="fas fa-external-link-alt"></i> مشاهده
+                        </a>
+                        <a href="files/M142.rar" class="btn download-btn-small" download>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- سایر مادها به همین شکل اضافه می‌شوند -->
+        </div>
+        
+        <!-- آمار -->
+        <div class="all-mods-stats">
+            <div class="stat-card">
+                <i class="fas fa-cube"></i>
+                <div class="stat-content">
+                    <h3>۸</h3>
+                    <p>تعداد مادها</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-hdd"></i>
+                <div class="stat-content">
+                    <h3>۱۲۵ MB</h3>
+                    <p>مجموع حجم</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-download"></i>
+                <div class="stat-content">
+                    <h3>۳۸۲</h3>
+                    <p>مجموع دانلودها</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-calendar"></i>
+                <div class="stat-content">
+                    <h3>۳۰/۹/۱۴۰۴</h3>
+                    <p>آخرین بروزرسانی</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- تبلیغات -->
+<div class="promotion-banner">
+    <div class="container">
+        <a href="https://uploadkon.ir/uploads/c80920_25110.png" target="_blank">
+            <img src="https://uploadkon.ir/uploads/c80920_25110.png" alt="تبلیغات Flormod" class="promo-image">
+        </a>
+    </div>
+</div>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="images/fit-logo.png" alt="Flormod Logo" class="footer-logo-img">
+                <span class="logo-text">Flormod</span>
+            </div>
+            <p class="footer-description">
+                ارائه بهترین مادهای حرفه‌ای برای GTA V با کیفیت عالی و پشتیبانی کامل.
+            </p>
+            <div class="footer-social">
+                <a href="https://t.me/flormod_channel" target="_blank" class="social-link telegram">
+                    <i class="fab fa-telegram"></i> کانال تلگرام
+                </a>
+                <a href="https://t.me/flormod" target="_blank" class="social-link support">
+                    <i class="fas fa-headset"></i> پشتیبانی تلگرام
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>لینک‌های سریع</h3>
+            <ul>
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="all-mods.html">همه مادها</a></li>
+                <li><a href="popular-mods.html">پرطرفدارها</a></li>
+                <li><a href="faq.html">سوالات متداول</a></li>
+                <li><a href="rules.html">قوانین</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>مادهای پرطرفدار</h3>
+            <ul>
+                <li><a href="mod-details.html">Apache هلیکوپتر</a></li>
+                <li><a href="B2.html">وسیله نقلیه B2</a></li>
+                <li><a href="M1114.html">M1114 Up Armored</a></li>
+                <li><a href="M142.html">M142 HIMARS</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>اطلاعات</h3>
+            <ul>
+                <li><i class="fas fa-envelope"></i> support@flormod.com</li>
+                <li><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                <li><i class="fab fa-telegram"></i> @flormod_channel</li>
+                <li><i class="fas fa-map-marker-alt"></i> تهران، ولیعصر</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="copyright">
+            © ۱۴۰۴ - ۱۴۰۲ Flormod. تمامی حقوق محفوظ است.
+        </div>
+        <div class="footer-credits">
+            <span><i class="fas fa-calendar"></i> آخرین بروزرسانی: ۳۰/۹/۱۴۰۴</span>
+        </div>
+    </div>
+</footer>
+
+<!-- back to top -->
+<div class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+</div>
+
+<script src="js/all-mods.js"></script>
+<script>
+    // فیلترها و مرتب‌سازی
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const viewBtns = document.querySelectorAll('.view-btn');
+    const modCards = document.querySelectorAll('.all-mod-card');
+    const container = document.querySelector('.all-mods-container');
+    
+    // مرتب‌سازی
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const sortBy = this.getAttribute('data-sort');
+            const cards = Array.from(modCards);
+            
+            cards.sort((a, b) => {
+                switch(sortBy) {
+                    case 'newest':
+                        return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
+                    case 'oldest':
+                        return new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date'));
+                    case 'size':
+                        return parseInt(b.getAttribute('data-size')) - parseInt(a.getAttribute('data-size'));
+                    case 'name':
+                        return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'));
+                    default:
+                        return 0;
+                }
+            });
+            
+            // حذف و اضافه مجدد با ترتیب جدید
+            cards.forEach(card => {
+                container.appendChild(card);
+            });
+        });
+    });
+    
+    // تغییر نمای گرید/لیست
+    viewBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            viewBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const view = this.getAttribute('data-view');
+            container.classList.remove('grid-view', 'list-view');
+            container.classList.add(view + '-view');
+        });
+    });
+    
+    // Back to top
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.opacity = '1';
+            backToTopBtn.style.visibility = 'visible';
+        } else {
+            backToTopBtn.style.opacity = '0';
+            backToTopBtn.style.visibility = 'hidden';
+        }
+    });
+    
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+</script>
+
+</body>
+</html>

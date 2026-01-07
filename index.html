@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flormod | مرکز مادهای حرفه‌ای GTA V</title>
+    
+    <link rel="website icon" type="jpg"
+    href="images/icon.jpg"
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    
+    <a href="index.html" class="logo">
+        <div class="logo-container">
+            <span class="logo-m">M</span>
+            <span class="logo-text">Flormod</span>
+        </div>
+    </a>
+    
+    <nav class="navbar">
+        <a href="#home" class="active"><i class="fas fa-home"></i> خانه</a>
+        <a href="#mods"><i class="fas fa-gamepad"></i> مادها</a>
+        <a href="all-mods.html"><i class="fas fa-th-list"></i> همه مادها</a>
+        <a href="popular-mods.html"><i class="fas fa-fire"></i> پرطرفدارها</a>
+        <a href="faq.html"><i class="fas fa-question-circle"></i> سوالات متداول</a>
+        <a href="rules.html"><i class="fas fa-gavel"></i> قوانین</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> تماس</a>
+    </nav>
+    
+    <div class="icons">
+        <a href="#" class="fas fa-search" id="search-btn"></a>
+    </div>
+    
+    <!-- search form -->
+    <form action="search-results.html" class="search-form" method="GET">
+        <input type="search" id="search-box" name="q" placeholder="جستجوی ماد...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+</header>
+<!-- header section ends -->
+<!-- home section starts -->
+<section class="home" id="home">
+    <div class="slide-container active">
+        <div class="slide">
+            <div class="content">
+                <span class="subtitle">به دنیای مادهای حرفه‌ای خوش آمدید</span>
+                <h1 class="title">بزرگترین مرجع مادهای فارسی</h1>
+                <h2 class="game">برای بازی GTA V</h2>
+                <p class="description">
+                    در Flormod می‌توانید بهترین و حرفه‌ای‌ترین مادها را برای بازی GTA V دانلود کنید. 
+                    تمامی مادها به طور کامل تست شده و با پشتیبانی کامل ارائه می‌شوند.
+                </p>
+                <div class="buttons">
+                    <a href="#mods" class="btn download-btn">
+                        <i class="fas fa-rocket"></i> مشاهده مادها
+                    </a>
+                    <a href="all-mods.html" class="btn gallery-btn">
+                        <i class="fas fa-th-list"></i> همه مادها
+                    </a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/banner.jpg" class="main-image" alt="Flormod Banner">
+                <div class="glow-effect"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+    
+    <div class="stats">
+        <div class="stat-item">
+            <i class="fas fa-download"></i>
+            <div class="stat-content">
+                <span class="stat-number" data-count="55200">0</span>
+                <span class="stat-text">دانلود کلی</span>
+            </div>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-cube"></i>
+            <div class="stat-content">
+                <span class="stat-number" data-count="8">0</span>
+                <span class="stat-text">تعداد مادها</span>
+            </div>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-gamepad"></i>
+            <div class="stat-content">
+                <span class="stat-number">1</span>
+                <span class="stat-text">بازی پشتیبانی</span>
+            </div>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-users"></i>
+            <div class="stat-content">
+                <span class="stat-number" data-count="9120">0</span>
+                <span class="stat-text">کاربر فعال</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- home section ends -->
+
+<!-- mods section starts -->
+<section class="mods" id="mods">
+    <div class="section-header">
+        <h2 class="section-title">جدیدترین <span>مادها</span></h2>
+        <p class="section-subtitle">آخرین مادهای منتشر شده در Flormod</p>
+    </div>
+    
+    <div class="mods-grid">
+        <!-- ماد 1 - هلیکوپتر Apache -->
+        <div class="mod-card">
+            <div class="mod-badge">پرطرفدار</div>
+            <div class="mod-image">
+                <img src="images/apache.jpg" alt="ماد هلیکوپتر Apache" class="gallery-image" data-gallery="apache">
+            </div>
+            <div class="mod-content">
+                <h3 class="mod-title">ماد هلیکوپتر AH-64D Apache</h3>
+                <p class="mod-desc">هلیکوپتر نظامی پیشرفته با سیستم تسلیحات کامل و گرافیک 4K</p>
+                <div class="mod-info">
+                    <span class="mod-game"><i class="fas fa-gamepad"></i> GTA V</span>
+                    <span class="mod-size"><i class="fas fa-hdd"></i> 20MB</span>
+                    <span class="mod-date"><i class="fas fa-calendar"></i> 28/9/1404</span>
+                </div>
+                <div class="mod-actions">
+                    <a href="mod-details.html" class="btn read-more-btn">
+                        <i class="fas fa-external-link-alt"></i> ادامه مطلب و جزئیات
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ماد 2 - B2 -->
+        <div class="mod-card">
+            <div class="mod-badge">جدید</div>
+            <div class="mod-image">
+                <img src="images/B2-post.jpg" alt="ماد وسیله نقلیه B2" class="gallery-image" data-gallery="b2">
+            </div>
+            <div class="mod-content">
+                <h3 class="mod-title">ماد وسیله نقلیه B2</h3>
+                <p class="mod-desc">وسیله نقلیه نظامی سنگین و پیشرفته برای مأموریت‌های حساس</p>
+                <div class="mod-info">
+                    <span class="mod-game"><i class="fas fa-gamepad"></i> GTA V</span>
+                    <span class="mod-size"><i class="fas fa-hdd"></i> 12MB</span>
+                    <span class="mod-date"><i class="fas fa-calendar"></i> 30/9/1404</span>
+                </div>
+                <div class="mod-actions">
+                    <a href="B2.html" class="btn read-more-btn">
+                        <i class="fas fa-external-link-alt"></i> ادامه مطلب و جزئیات
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ماد M1114 -->
+<div class="mod-card">
+    <div class="mod-badge">جدید</div>
+    <div class="mod-image">
+        <img src="images/M1114-set.jpg" alt="ماد M1114 Up Armored" class="gallery-image" data-gallery="m1114">
+    </div>
+    <div class="mod-content">
+        <h3 class="mod-title">ماد M1114 Up Armored</h3>
+        <p class="mod-desc">وسیله نقلیه زره‌پوش برای عملیات‌های نظامی و امنیتی</p>
+        <div class="mod-info">
+            <span class="mod-game"><i class="fas fa-gamepad"></i> GTA V</span>
+            <span class="mod-size"><i class="fas fa-hdd"></i> 24MB</span>
+            <span class="mod-date"><i class="fas fa-calendar"></i> 30/9/1404</span>
+        </div>
+        <div class="mod-actions">
+            <a href="M1114.html" class="btn read-more-btn">
+                <i class="fas fa-external-link-alt"></i> ادامه مطلب و جزئیات
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ماد M142 -->
+<div class="mod-card">
+    <div class="mod-badge">جدید</div>
+    <div class="mod-image">
+        <img src="images/M142-set.jpg" alt="ماد M142 HIMARS" class="gallery-image" data-gallery="m142">
+    </div>
+    <div class="mod-content">
+        <h3 class="mod-title">ماد M142 HIMARS</h3>
+        <p class="mod-desc">سیستم پرتاب موشک سریع و قابل حمل برای حمله از راه دور</p>
+        <div class="mod-info">
+            <span class="mod-game"><i class="fas fa-gamepad"></i> GTA V</span>
+            <span class="mod-size"><i class="fas fa-hdd"></i> 9MB</span>
+            <span class="mod-date"><i class="fas fa-calendar"></i> 30/9/1404</span>
+        </div>
+        <div class="mod-actions">
+            <a href="M142.html" class="btn read-more-btn">
+                <i class="fas fa-external-link-alt"></i> ادامه مطلب و جزئیات
+            </a>
+        </div>
+    </div>
+</div>
+    
+    <div class="view-all">
+        <a href="all-mods.html" class="btn view-all-btn">
+            <i class="fas fa-th-list"></i> مشاهده همه مادها
+        </a>
+    </div>
+</section>
+<!-- mods section ends -->
+
+<!-- games section starts -->
+<section class="games" id="games">
+    <div class="section-header">
+        <h2 class="section-title">بازی <span>پشتیبانی شده</span></h2>
+        <p class="section-subtitle">مادهای اختصاصی برای GTA V</p>
+    </div>
+    
+    <div class="games-grid">
+        <div class="game-card">
+            <div class="game-icon">
+                <img src="images/logo.png" alt="GTA V">
+            </div>
+            <h3 class="game-title">GTA V</h3>
+            <p class="game-count">۸ ماد</p>
+            <a href="all-mods.html" class="game-link">مشاهده مادها</a>
+        </div>
+    </div>
+</section>
+<!-- games section ends -->
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <div class="section-header">
+        <h2 class="section-title">درباره <span>Flormod</span></h2>
+        <p class="section-subtitle">بزرگترین مرجع مادهای فارسی برای گیمرهای ایرانی</p>
+    </div>
+    
+    <div class="about-content">
+        <div class="about-image">
+            <img src="images/about.jpg" alt="درباره Flormod">
+        </div>
+        <div class="about-text">
+            <h3>چرا Flormod را انتخاب کنید؟</h3>
+            <p>Flormod در سال ۱۴۰۲ با هدف ارائه بهترین مادهای فارسی برای بازی GTA V تأسیس شد. ما برترین مادها را از سراسر جهان جمع‌آوری، تست و به فارسی ترجمه می‌کنیم.</p>
+            
+            <div class="features-list">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>تمامی مادها تست و عاری از ویروس</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>پشتیبانی کامل و آموزش نصب فارسی</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>به‌روزرسانی روزانه مادها</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>دانلود مستقیم و بدون محدودیت</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>جامعه فعال کاربران فارسی‌زبان</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>سازگاری کامل با نسخه‌های جدید GTA V</span>
+                </div>
+            </div>
+            
+            <a href="faq.html" class="btn about-btn">
+                <i class="fas fa-question-circle"></i> سوالات متداول
+            </a>
+        </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- contact section starts -->
+<section class="contact" id="contact">
+    <div class="section-header">
+        <h2 class="section-title">تماس با <span>ما</span></h2>
+        <p class="section-subtitle">برای پرسش، پیشنهاد یا گزارش مشکل با ما در ارتباط باشید</p>
+    </div>
+    
+    <div class="contact-content">
+        <div class="contact-info">
+            <div class="info-box">
+                <i class="fas fa-envelope"></i>
+                <h3>ایمیل</h3>
+                <p>support@flormod.com</p>
+            </div>
+            
+            <div class="info-box">
+                <i class="fas fa-phone"></i>
+                <h3>تلفن</h3>
+                <p>۰۲۱-۱۲۳۴۵۶۷۸</p>
+            </div>
+            
+            <div class="info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>آدرس</h3>
+                <p>تهران، خیابان ولیعصر</p>
+            </div>
+            
+            <div class="social-box">
+                <h3>شبکه‌های اجتماعی</h3>
+                <div class="social-links">
+                    <a href="https://t.me/flormod_channel" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://t.me/flormod" target="_blank"><i class="fas fa-headset"></i></a>
+                </div>
+                <p class="support-text">
+                    <i class="fas fa-life-ring"></i>
+                    ارتباط با پشتیبانی در صورت هر مشکلی در تلگرام: 
+                    <a href="https://t.me/flormod" target="_blank">https://t.me/flormod</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <form action="#">
+                <input type="text" placeholder="نام شما" class="box">
+                <input type="email" placeholder="ایمیل شما" class="box">
+                <input type="text" placeholder="موضوع" class="box">
+                <textarea placeholder="پیام شما" class="box" rows="5"></textarea>
+                <button type="submit" class="btn submit-btn">
+                    <i class="fas fa-paper-plane"></i> ارسال پیام
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- contact section ends -->
+
+<!-- تبلیغات پایین صفحه -->
+<div class="promotion-banner">
+    <div class="container">
+        <a href="https://uploadkon.ir/uploads/c80920_25110.png" target="_blank">
+            <img src="https://uploadkon.ir/uploads/c80920_25110.png" alt="تبلیغات Flormod" class="promo-image">
+        </a>
+    </div>
+</div>
+
+<!-- Image Gallery Modal -->
+<div class="gallery-modal" id="galleryModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-image-container">
+            <img id="modalImage" src="" alt="">
+        </div>
+        <div class="modal-navigation">
+            <button class="modal-prev"><i class="fas fa-chevron-right"></i></button>
+            <button class="modal-next"><i class="fas fa-chevron-left"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- footer section starts -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="images/fit-logo.png" alt="Flormod Logo" class="footer-logo-img">
+                <span class="logo-text">Flormod</span>
+            </div>
+            <p class="footer-description">
+                ارائه بهترین مادهای حرفه‌ای برای GTA V با کیفیت عالی و پشتیبانی کامل.
+            </p>
+            <div class="footer-social">
+                <a href="https://t.me/flormod_channel" target="_blank" class="social-link telegram">
+                    <i class="fab fa-telegram"></i> کانال تلگرام
+                </a>
+                <a href="https://t.me/flormod" target="_blank" class="social-link support">
+                    <i class="fas fa-headset"></i> پشتیبانی تلگرام
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>لینک‌های سریع</h3>
+            <ul>
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="all-mods.html">همه مادها</a></li>
+                <li><a href="popular-mods.html">پرطرفدارها</a></li>
+                <li><a href="faq.html">سوالات متداول</a></li>
+                <li><a href="rules.html">قوانین</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>مادها</h3>
+            <ul>
+                <li><a href="mod-details.html">Apache هلیکوپتر</a></li>
+                <li><a href="B2.html">وسیله نقلیه B2</a></li>
+                <li><a href="M1114.html">M1114 Up Armored</a></li>
+                <li><a href="M142.html">M142 HIMARS</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>توسعه‌دهنده</h3>
+            <ul>
+                <li><i class="fas fa-code"></i> تیم Flormod</li>
+                <li><i class="fas fa-calendar"></i> تاسیس: ۱۴۰۲</li>
+                <li><i class="fas fa-download"></i> ۵۵,۲۰۰+ دانلود</li>
+                <li><i class="fas fa-users"></i> ۹,۱۲۰+ کاربر</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="copyright">
+            © ۱۴۰۴ - ۱۴۰۲ Flormod. تمامی حقوق محفوظ است.
+        </div>
+        <div class="footer-credits">
+            <span><i class="fas fa-calendar"></i> آخرین بروزرسانی: ۳۰/۹/۱۴۰۴</span>
+        </div>
+    </div>
+</footer>
+<!-- footer section ends -->
+
+<!-- back to top -->
+<div class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+</div>
+
+<!-- custom js file link -->
+<script src="js/script.js"></script>
+
+<script>
+    // شمارنده آمار
+    function initCounters() {
+        const counters = document.querySelectorAll('.stat-number[data-count]');
+        
+        counters.forEach(counter => {
+            const target = parseFloat(counter.getAttribute('data-count'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            
+            let current = 0;
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                counter.textContent = Math.floor(current).toLocaleString('fa-IR');
+            }, 16);
+        });
+    }
+    
+    // اسلایدشو
+    let slides = document.querySelectorAll('.slide-container');
+    let currentSlide = 0;
+    let slideInterval;
+    
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        currentSlide = index;
+    }
+    
+    function next() {
+        let nextSlide = (currentSlide + 1) % slides.length;
+        showSlide(nextSlide);
+    }
+    
+    function prev() {
+        let prevSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prevSlide);
+    }
+    
+    function startSlideshow() {
+        slideInterval = setInterval(next, 5000);
+    }
+    
+    // دکمه بازگشت به بالا
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTop.style.opacity = '1';
+            backToTop.style.visibility = 'visible';
+        } else {
+            backToTop.style.opacity = '0';
+            backToTop.style.visibility = 'hidden';
+        }
+    });
+    
+    if (backToTop) {
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // گالری تصاویر
+    const galleryModal = document.getElementById('galleryModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.querySelector('.close-modal');
+    const prevBtn = document.querySelector('.modal-prev');
+    const nextBtn = document.querySelector('.modal-next');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    
+    let currentGalleryImages = [];
+    let currentImageIndex = 0;
+    
+    // تصاویر برای هر ماد
+    const galleryData = {
+        apache: ['images/apache-1.jpg', 'images/apache-2.jpg', 'images/apache-3.jpg'],
+        b2: ['images/B2-1.jpg', 'images/B2-2.jpg', 'images/B2-3.jpg'],
+        m1114: ['images/M1114-1.jpg', 'images/M1114-2.jpg', 'images/M1114-3.jpg'],
+        m142: ['images/M142-1.jpg', 'images/M142-2.jpg', 'images/M142-3.jpg']
+    };
+    
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
+            const galleryType = this.getAttribute('data-gallery');
+            currentGalleryImages = galleryData[galleryType] || [];
+            currentImageIndex = 0;
+            
+            if (currentGalleryImages.length > 0) {
+                modalImage.src = currentGalleryImages[0];
+                galleryModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+    
+    if (closeModal) {
+        closeModal.addEventListener('click', function() {
+            galleryModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+    
+    galleryModal.addEventListener('click', function(e) {
+        if (e.target === galleryModal) {
+            galleryModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+            if (currentGalleryImages.length > 0) {
+                currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+                modalImage.src = currentGalleryImages[currentImageIndex];
+            }
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+            if (currentGalleryImages.length > 0) {
+                currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
+                modalImage.src = currentGalleryImages[currentImageIndex];
+            }
+        });
+    }
+    
+    // بستن با کلید Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && galleryModal.style.display === 'flex') {
+            galleryModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // شروع انیمیشن‌ها
+    window.addEventListener('load', function() {
+        initCounters();
+        startSlideshow();
+        
+        // توقف اسلایدشو هنگام هاور
+        const homeSection = document.querySelector('.home');
+        if (homeSection) {
+            homeSection.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            homeSection.addEventListener('mouseleave', () => {
+                startSlideshow();
+            });
+        }
+    });
+</script>
+<!-- Admin Access Button -->
+<a href="admin-login.html" class="admin-access-btn" title="دسترسی ادمین">
+    <i class="fas fa-user-shield"></i>
+</a>
+
+<style>
+    .admin-access-btn {
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+        width: 5rem;
+        height: 5rem;
+        background: linear-gradient(45deg, #2c3e50, #3498db);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        z-index: 999;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        opacity: 0.7;
+    }
+    
+    .admin-access-btn:hover {
+        transform: scale(1.1) rotate(15deg);
+        box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+        opacity: 1;
+    }
+</style>
+
+</body>
+</html>
