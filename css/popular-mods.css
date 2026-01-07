@@ -1,0 +1,335 @@
+/* Popular Mods Styles */
+.popular-mods {
+    padding: 6rem 0;
+    background: var(--darker);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.breadcrumb {
+    background: var(--light);
+    padding: 1.5rem 0;
+    margin-top: 7rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.breadcrumb .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+
+.breadcrumb a {
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.breadcrumb i {
+    color: var(--primary);
+    margin: 0 1rem;
+}
+
+.breadcrumb span {
+    color: var(--text-secondary);
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: var(--light);
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--lighter);
+    color: var(--text-secondary);
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.filter-btn:hover {
+    color: var(--text);
+    border-color: var(--primary);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: var(--text);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+}
+
+.sort-options select {
+    padding: 0.8rem 1.5rem;
+    background: var(--lighter);
+    color: var(--text);
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    border: 1px solid var(--border);
+    min-width: 15rem;
+}
+
+.sort-options select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Popular Grid */
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+.popular-card {
+    background: var(--light);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popular-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(139, 0, 0, 0.3);
+    border-color: var(--primary);
+}
+
+.popular-rank {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: linear-gradient(45deg, var(--accent), #ff8c00);
+    color: var(--dark);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.popular-image {
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.popular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.popular-card:hover .popular-image img {
+    transform: scale(1.1);
+}
+
+.popular-badge {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.popular-content {
+    padding: 2rem;
+}
+
+.popular-title {
+    font-size: 2rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.popular-desc {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    min-height: 4.2rem;
+}
+
+.popular-stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+}
+
+.stat i {
+    color: var(--primary);
+}
+
+.popular-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.view-btn {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--primary);
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+.popular-category {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--primary);
+    background: rgba(139, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Stats Overview */
+.popular-stats-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.stats-card {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.2);
+}
+
+.stats-card i {
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+.stats-content h3 {
+    font-size: 2.5rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.stats-content p {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+    }
+    
+    .sort-options {
+        align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .view-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .popular-stats-overview {
+        grid-template-columns: 1fr;
+    }
+}
